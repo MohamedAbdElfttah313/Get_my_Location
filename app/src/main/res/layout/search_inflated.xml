@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginVertical="20dp"
+
+    android:weightSum="5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cardBackgroundColor="#686868"
+        app:cardCornerRadius="99dp"
+        app:elevation="5dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ImageOfSearchedUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/NameOfSearchedUser"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Mohamed AbdElfattah"
+        android:layout_weight="3"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="sans-serif"/>
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/SearchAddFriendButton"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:textOn=""
+        android:textOff=""
+        android:scaleY="0.6"
+        android:scaleX="0.45"
+        android:layout_gravity="center|right"
+        android:background="@drawable/send_friend_request"
+        android:layout_weight="1"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

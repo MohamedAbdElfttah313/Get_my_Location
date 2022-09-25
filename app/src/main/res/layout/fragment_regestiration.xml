@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.RegistrationAndLogin.RegistrationFragment"
+    android:background="@drawable/login_activity_background">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:text="Sign In With Us"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:letterSpacing="0.18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/RegisterFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded"
+                android:drawableEnd="@drawable/ic_baseline_person_outline_24"
+                android:gravity="start|center"
+                android:hint="Type Your First Name"
+                android:inputType="text"
+                android:paddingHorizontal="18dp"
+                android:textColorHint="#676767"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/RegisterLastName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded"
+                android:drawableEnd="@drawable/ic_baseline_person_outline_24"
+                android:gravity="start|center"
+                android:hint="And Your Last Name is?"
+                android:inputType="text"
+                android:paddingHorizontal="18dp"
+                android:textColorHint="#676767"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/RegisterEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded"
+                android:drawableEnd="@drawable/ic_baseline_email_24"
+                android:gravity="start|center"
+                android:hint="Kindly Type Your Email"
+                android:inputType="text"
+                android:paddingHorizontal="18dp"
+                android:textColorHint="#676767"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded"
+                android:outlineProvider="none"
+                app:hintEnabled="false"
+
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/RegisterPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:textColorHint="#676767"
+                    android:hint="Your Password Goes here"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordConfirmTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded"
+
+                app:hintEnabled="false"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ConfirmRegisterPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:textColorHint="#676767"
+
+                    android:hint="Enter Your Password again"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/RegisterDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded"
+                android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                android:gravity="start|center"
+                android:hint="And your Date Of Birth is .."
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="text"
+                android:paddingHorizontal="18dp"
+                android:textColorHint="#676767"
+                android:textSize="16sp" />
+
+
+            <!--<android.widget.Button
+                android:id="@+id/RegisterDateOfBirth"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded"
+                android:backgroundTint="#D1D1D1"
+                android:text="I was born In.."
+                android:textAllCaps="false"
+                android:textSize="16sp" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28sp"
+                android:text="Any Error Notes Will Be Written Below This:"
+                android:textColor="#000000"
+                android:textStyle="italic" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/RegisterErrorNotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="2dp"
+
+                android:layout_marginStart="4dp"
+
+                android:textColor="#9E2323"
+                android:textStyle="italic" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <android.widget.Button
+        android:id="@+id/Register"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#DCA587"
+        android:letterSpacing="0.06"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

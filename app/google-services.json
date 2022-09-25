@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1030671877568",
+    "project_id": "get-my-location-5b14c",
+    "storage_bucket": "get-my-location-5b14c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030671877568:android:5b1271b46aaf7d99947425",
+        "android_client_info": {
+          "package_name": "com.example.getmylocation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030671877568-hl7dirbcmp1rhlul0batag6fcv8h053k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmL0ePvbTQXXuJauFciHJqv5k0cXWVrFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030671877568-hl7dirbcmp1rhlul0batag6fcv8h053k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

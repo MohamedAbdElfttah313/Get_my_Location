@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/whatever"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.CurrentUser.Fragments.ProfileFragment">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/down_corners"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="#CDCDCD"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ProfilePictureImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ProfileFullName"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:elevation="2dp"
+        android:letterSpacing="0.02"
+
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat3"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+
+        android:background="@drawable/top_corners"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/GeneralProfileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginVertical="85dp"
+                app:cardBackgroundColor="#BF9FF8"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="Privacy"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Manage Account info, etc"
+                    android:textColor="#515151"
+                    android:textSize="12sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginVertical="85dp"
+                app:cardBackgroundColor="#99BDFA"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="Activities"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Recent Interactions and logs."
+                    android:textColor="#515151"
+                    android:textSize="12sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginVertical="85dp"
+                app:cardBackgroundColor="#9EF8F8"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="Friends"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="See and Manage Friends list "
+                    android:textColor="#515151"
+                    android:textSize="12sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginVertical="85dp"
+                app:cardBackgroundColor="#D5FAA9"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="Health Status"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Medical info, etc."
+                    android:textColor="#515151"
+                    android:textSize="12sp" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/SelectionFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.hitomi.cmlibrary.CircleMenu
+        android:id="@+id/ProfileCircleMenu"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat3"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileFullName"
+        app:layout_constraintVertical_bias="0.07" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

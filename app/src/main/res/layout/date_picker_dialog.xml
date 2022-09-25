@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout
+    android:id="@+id/relativeDateFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded"
+    android:backgroundTint="#D6DCED"
+    android:padding="24dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/DOBtextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:letterSpacing="0.06"
+        android:textStyle="bold"
+        android:layout_marginEnd="48dp"
+        android:textSize="22sp"
+        app:fontFamily="sans-serif"
+        android:text="Date Of Birth"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/DOBtextView"
+        android:layout_above="@id/relativeDateFragment"
+        android:layout_toStartOf="@id/relativeDateFragment"
+        android:layout_toEndOf="@id/relativeDateFragment"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       android:weightSum="2"
+        android:padding="12dp"
+        android:layout_below="@id/datePicker"
+        android:layout_above="@id/relativeDateFragment"
+        android:layout_toStartOf="@id/relativeDateFragment"
+        android:layout_toEndOf="@id/relativeDateFragment">
+
+        <android.widget.Button
+            android:id="@+id/CancelDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textAllCaps="false"
+
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:textSize="14sp"/>
+        <android.widget.Button
+            android:id="@+id/ApplyDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="8dp"
+            android:text="Apply"
+            android:textSize="14sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

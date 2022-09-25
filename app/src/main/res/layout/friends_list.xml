@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="15dp"
+    android:layout_marginHorizontal="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="#686868"
+        app:cardCornerRadius="99dp"
+        app:elevation="5dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ImageOfFriend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/NameOfFriend"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="16dp"
+        android:layout_marginHorizontal="18dp"
+        android:fontFamily="sans-serif"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

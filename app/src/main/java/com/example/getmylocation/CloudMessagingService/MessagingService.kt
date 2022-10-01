@@ -1,5 +1,7 @@
 package com.example.getmylocation.CloudMessagingService
 
+import android.app.PendingIntent
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -66,9 +68,9 @@ class MessagingService : FirebaseMessagingService() {
             .load(Uri.parse(pic))
             .submit().get()
 
-        sendNotification(remoteMessage.data["firstName"]+" "+remoteMessage.data["lastName"],
-            "DOB : ${remoteMessage.data["dob"]}",
-            Random.nextInt(1,1000),
+        sendHelpNotification("SOMEONE NEEDS HELP!",
+            "HELP IS NEEDED IN THE ATTACHED PLACE!!",
+            remoteMessage.data["lat"]!!.toDouble() , remoteMessage.data["lon"]!!.toDouble(),
             senderPicture)
 
     }
@@ -108,9 +110,9 @@ class MessagingService : FirebaseMessagingService() {
             .load(Uri.parse(remoteMessage.data["profilePicture"]))
             .submit().get()
 
-        sendNotification("FRIEND NEEDS HELP!",
+        sendHelpNotification("FRIEND NEEDS HELP!",
             "${remoteMessage.data["nameForSearch"]!!.toUpperCase()} NEEDS HELP RIGHT NOW!!",
-            Random.nextInt(1100,1200),
+            remoteMessage.data["lat"]!!.toDouble() , remoteMessage.data["lon"]!!.toDouble(),
             senderPicture)
     }
 
@@ -127,6 +129,27 @@ class MessagingService : FirebaseMessagingService() {
 
         with(NotificationManagerCompat.from(this)){
             notify(id , notification)
+        }
+    }
+
+    private fun sendHelpNotification(Title : String , Text: String , lat : Double , lon : Double ,largeIcon : Bitmap = BitmapFactory.decodeResource(resources , R.drawable.circlemenuhere)){
+
+        val mapUri = Uri.parse("google.navigation:q=$lat,$lon")
+        val locationIntent = Intent(Intent.ACTION_VIEW , mapUri).apply {
+            setPackage("com.google.android.apps.maps")
+        }
+        val notification = NotificationCompat.Builder(this ,"Channel1")
+            .setContentTitle(Title)
+            .setContentText(Text)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setLargeIcon(largeIcon)
+            .setContentIntent(PendingIntent.getActivity(this , 12 , locationIntent,0))
+            .setOnlyAlertOnce(true)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .build()
+
+        with(NotificationManagerCompat.from(this)){
+            notify(9999 , notification)
         }
     }
 }

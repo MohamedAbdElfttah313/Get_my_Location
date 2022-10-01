@@ -9,7 +9,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 private const val BASE_URL = "https://fcm.googleapis.com/"
-private const val SERVER_KEY = "YOUR_AUTHORIZATION_KEY_GOES_HERE"
+private const val SERVER_KEY = "AAAA7_jUxcA:APA91bFL-5_YL2UezP3Jq-kvKEcc-zzuEuSotXoUDkWWK6VJLsjt0KeXNyHdzZyllCBsUyGk9mA5rn7BJPD-Db3KrAPQsJcFzE8nbKJm-8YdGZEVo2wX_d7G7yX8g_u3rlqTm6BBrd3H"
 private const val CONTENT_TYPE = "application/json"
 
 

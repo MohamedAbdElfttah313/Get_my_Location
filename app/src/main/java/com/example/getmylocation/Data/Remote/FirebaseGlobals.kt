@@ -77,6 +77,7 @@ class FirebaseGlobals {
         private fun getCurrentUserDocumentInfo() {
             fireStoreCollection.document(auth.currentUser!!.uid).run {
                 get().addOnSuccessListener {
+
                     val dataWithoutToken = it.toObject(NewUser::class.java)
                     dataWithoutToken!!.token = MessagingService.token
                     set(dataWithoutToken , SetOptions.merge())

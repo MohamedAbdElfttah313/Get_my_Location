@@ -20,7 +20,7 @@ class CurrentUserViewModel @Inject constructor() : ViewModel() {
             subscribeToTopic(TYPE)
             token.addOnSuccessListener {
                 MessagingService.token = it
-
+                println("TEST "+MessagingService.token)
                 with(FirebaseGlobals()){
                     updateUserInfo()
                     updateFriendsRequest()

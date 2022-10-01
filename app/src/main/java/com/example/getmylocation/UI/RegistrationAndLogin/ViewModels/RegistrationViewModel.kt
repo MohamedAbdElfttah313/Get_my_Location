@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.getmylocation.Domain.Models.NewUser
 import com.example.getmylocation.Domain.UseCases.AuthUseCases.addUserDataUseCase
 import com.example.getmylocation.Domain.UseCases.AuthUseCases.signUpUseCase
+import com.google.android.gms.tasks.Task
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.lang.StringBuilder
 import javax.inject.Inject
@@ -32,7 +33,7 @@ class RegistrationViewModel @Inject constructor(): ViewModel() {
         }
     }
 
-    fun addUserToFireStore(user : NewUser){
-        addUserData(user)
+    fun addUserToFireStore(user : NewUser) : Task<Void>{
+        return addUserData(user)
     }
 }

@@ -58,10 +58,11 @@ class RegistrationFragment : Fragment() {
                     "$firstName $lastName".toLowerCase(),
                     "","","")
 
-                registerViewModel.addUserToFireStore(newUser)
 
-                Toast.makeText(requireContext() , "Registered Successfully" , Toast.LENGTH_SHORT).show()
-                parentFragmentManager.popBackStack()
+                registerViewModel.addUserToFireStore(newUser).addOnSuccessListener {
+                    parentFragmentManager.popBackStack()
+                    Toast.makeText(requireContext() , "Registered Successfully" , Toast.LENGTH_SHORT).show()
+                }
 
             }else{
                 Toast.makeText(requireContext() , registerViewModel.signUpResultMessage , Toast.LENGTH_SHORT).show()

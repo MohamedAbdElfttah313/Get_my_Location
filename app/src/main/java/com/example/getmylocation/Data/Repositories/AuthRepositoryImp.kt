@@ -32,6 +32,6 @@ class AuthRepositoryImp @Inject constructor() : AuthRepository {
     }
 
     override fun addUserData(user: NewUser): Task<Void> {
-        return FirebaseGlobals.fireStoreCollection.document(FirebaseGlobals.auth.currentUser!!.uid).set(user)
+        return FirebaseGlobals.fireStoreCollection.document(user.uid!!).set(user)
     }
 }
